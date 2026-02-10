@@ -9,4 +9,4 @@ spec:
   type: service
   lifecycle: production
   owner: admin
-  system: backstage-test
+  ## system: backstage-test
