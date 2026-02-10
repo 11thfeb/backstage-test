@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, master]
   pull_request:
 
 jobs:
@@ -12,17 +12,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Build
-        run: |
-          echo "Building..."
-          # Your build commands
+        run: echo "Building..."
 
       - name: Test
-        run: |
-          echo "Testing..."
-          # Your test commands
-
-      - name: Deploy
-        if: github.ref == 'refs/heads/main'
-        run: |
-          echo "Deploying..."
-          # Your deploy commands
+        run: echo "Testing..."
