@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build
+        run: |
+          echo "Building..."
+          # Your build commands
+
+      - name: Test
+        run: |
+          echo "Testing..."
+          # Your test commands
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying..."
+          # Your deploy commands
